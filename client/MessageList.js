@@ -3,7 +3,7 @@ import styles from './MessageList.css';
 
 const Message = props => (
   <div className={styles.Message}>
-    <strong>{props.from} :</strong>
+    <strong>{props.from}: </strong>
     <span>{props.text}</span>
   </div>
 );
@@ -11,7 +11,9 @@ const Message = props => (
 const MessageList = props => (
   <div className={styles.MessageList}>
     {
+   
       props.messages.map((message, i) => {
+
         return ( 
           <Message
             key={i}
@@ -23,5 +25,7 @@ const MessageList = props => (
     }
   </div>
 );
+
+
 
 export default MessageList;
